@@ -37,7 +37,7 @@ public class MyHashTable<K, V> {
 
         int hash = 1;
         for (int i = 0; i < arr.length; i++) {
-            hash += 51 * hash + arr[i];
+            hash = 31 * hash + arr[i];
         }
 
         return hash;
