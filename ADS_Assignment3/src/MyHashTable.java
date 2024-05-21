@@ -30,7 +30,7 @@ public class MyHashTable<K, V> {
         chainArray = new HashNode[M];
     }
 
-    private int computeHashCode(int[] arr) {
+    private int HashCode(int[] arr) {
         if (arr == null) {
             return 0;
         }
@@ -45,7 +45,7 @@ public class MyHashTable<K, V> {
 
 
 
-    private int computeHashCode(String s) {
+    private int HashCode(String s) {
         if (s == null) {
             return 0;
         }
@@ -62,11 +62,11 @@ public class MyHashTable<K, V> {
     }
 
     private int hash(int[] arr) {
-        return Math.abs(computeHashCode(arr)) % M;
+        return Math.abs(HashCode(arr)) % M;
     }
 
     private int hash(String s) {
-        return Math.abs(computeHashCode(s)) % M;
+        return Math.abs(HashCode(s)) % M;
     }
 
 
